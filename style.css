@@ -5,28 +5,41 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
   margin: 0;
   padding: 0;
 }
 
 
 header {
-  background-color: #333;
+  background-color: #004466;
   color: #fff;
   padding: 1rem;
   text-align: center;
 }
 
 nav a {
-  color: #fff;
+  color: #ffffff;
   margin: 0 10px;
   text-decoration: none;
 }
 
 
+footer {
+  background-color: #004466;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+body.index-home {
+  background-image: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+}
+
+
 .blog-post {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #ccc;
   margin: 20px auto;
   padding: 20px;
@@ -34,9 +47,15 @@ nav a {
   border-radius: 8px;
 }
 
-h1, h2 {
+.blog-post h1, .blog-post h2 {
+  color: #003366;
+  font-size: 1.8rem;
   text-align: center;
-  color: #333;
+}
+
+.blog-post p {
+  color: #333333;
+  font-size: 1rem;
 }
 
 
@@ -52,6 +71,7 @@ h1, h2 {
 label {
   display: block;
   margin-top: 10px;
+  color: #004466;
 }
 
 input, textarea {
@@ -61,10 +81,12 @@ input, textarea {
 }
 
 input[type="submit"] {
-  background-color: #333;
+  background-color: #004466;
   color: #fff;
   margin-top: 10px;
   cursor: pointer;
+  border: none;
+  padding: 10px;
 }
 
 
@@ -82,5 +104,51 @@ th, td {
 }
 
 th {
-  background-color: #eee;
+  background-color: #e6f2f7;
+  color: #004466;
+}
+
+
+@media (max-width: 768px) {
+  header, footer {
+    text-align: center;
+    padding: 1rem 0.5rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .blog-post, .contact-form, table {
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .blog-post h1, .blog-post h2 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+
+  input, textarea {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-post h1, .blog-post h2 {
+    font-size: 1.2rem;
+  }
+
+  input, textarea {
+    padding: 6px;
+  }
+
+  input[type="submit"] {
+    font-size: 1rem;
+  }
 }
